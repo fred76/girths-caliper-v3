@@ -1,0 +1,27 @@
+.mat-toolbar {
+  position: fixed;
+  position: -fixed-sticky;
+  top: 0;
+  z-index: 999;
+  height: 70px;
+
+  background-color: rgba(21, 24, 25, 0.9);
+  overflow: hidden;
+}
+
+.logo {
+  width: 100%;
+}
+.nav-caption {
+  position: -webkit-sticky;
+  padding: 10px;
+  font-size: 20px;
+}
+.login-button {
+  border-radius: 50px !important;
+  display: flex;
+  justify-content: flex-start;
+  padding: 2px;
+  font-size: 9px;
+  width: 220px;
+}
