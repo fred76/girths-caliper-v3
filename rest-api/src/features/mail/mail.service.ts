@@ -6,30 +6,8 @@ import { User } from './../user/user.entity';
 export class MailService {
   constructor(private mailerService: MailerService) {}
 
-  async sendUserConfirmation(email: string, token: string) {
-    const url = `example.com/auth/confirm?token=${token}`;
-
-    await this.mailerService
-      .sendMail({
-        to: email,
-        subject: 'Welcome to Nice App! Confirm your Email',
-        template: './confirmation',
-        context: {
-          code: 'www.google.it',
-          link: 'www.google.it',
-          username: email,
-          url
-        }
-      })
-      .then((success) => {
-        console.log(JSON.stringify(success) + ' 333333');
-      })
-      .catch((err) => {
-        console.log(err + ' A A A A A A A A');
-      });
-  }
   async sendUserConfirmation2(destination: string, token: string) {
-    const url = `http://localhost:4200/login?token=${token}`;
+    const url = `http://localhost:4200/login-back/${token}`;
 
     await this.mailerService
       .sendMail({
@@ -43,7 +21,7 @@ export class MailService {
       })
       .then((success) => {})
       .catch((err) => {
-        console.log(err + ' A A A A A A A A');
+        console.log(err + ' from mailerService/sendUserConfirmation2');
       });
   }
 }

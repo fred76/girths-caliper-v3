@@ -14,6 +14,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     // this.authService.loginM('john', 'changeme')
-    this.authService.pippo('albertolunardini@gmail.com', 'ALBY');
+    this.authService.userEmailRequest('albertolunardini@gmail.com', 'ALBY');
   }
 }

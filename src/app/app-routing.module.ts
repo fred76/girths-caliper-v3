@@ -12,6 +12,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./features/auth/login/login.module').then((m) => m.LoginModule),
   },
+  {
+    path: 'login-back',
+    loadChildren: () =>
+      import('./features/auth/login-back/login-back.module').then(
+        (m) => m.LoginBackModule
+      ),
+  },
   { path: '**', redirectTo: 'home' },
 ];
 
